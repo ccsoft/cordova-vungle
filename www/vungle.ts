@@ -10,7 +10,7 @@ module CC {
                 if (successcb) successcb();
             }, (err) => {
                 if(errorcb) errorcb(err);
-            }, "VunglePlugin", "init", [vungleid, config]);
+            }, "CordovaVungle", "init", [vungleid, config]);
         }
 
         playAd(config?: IVungleConfig, successcb?: () => void, errorcb?: (err: string) => void) {
@@ -18,7 +18,7 @@ module CC {
                 if(successcb) successcb();
             }, (err) => {
                 if(errorcb) errorcb(err);
-            }, "VunglePlugin", "playAd", [config]);
+            }, "CordovaVungle", "playAd", [config]);
         }
 
         isVideoAvailable(successcb: (avail: boolean) => void, errorcb?: (err: string) => void) {
@@ -26,7 +26,7 @@ module CC {
                 successcb(s == 1 ? true : false);
             }, (err) => {                    
                 if(errorcb) errorcb(err);
-            }, "VunglePlugin", "isVideoAvailable", []);
+            }, "CordovaVungle", "isVideoAvailable", []);
         }
     }
 }

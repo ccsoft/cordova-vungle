@@ -14,7 +14,7 @@ var CC;
             }, function (err) {
                 if (errorcb)
                     errorcb(err);
-            }, "VunglePlugin", "init", [vungleid, config]);
+            }, "CordovaVungle", "init", [vungleid, config]);
         };
 
         Vungle.prototype.playAd = function (config, successcb, errorcb) {
@@ -24,7 +24,7 @@ var CC;
             }, function (err) {
                 if (errorcb)
                     errorcb(err);
-            }, "VunglePlugin", "playAd", [config]);
+            }, "CordovaVungle", "playAd", [config]);
         };
 
         Vungle.prototype.isVideoAvailable = function (successcb, errorcb) {
@@ -33,7 +33,7 @@ var CC;
             }, function (err) {
                 if (errorcb)
                     errorcb(err);
-            }, "VunglePlugin", "isVideoAvailable", []);
+            }, "CordovaVungle", "isVideoAvailable", []);
         };
         return Vungle;
     })();
