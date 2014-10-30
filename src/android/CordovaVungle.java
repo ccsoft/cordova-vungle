@@ -53,11 +53,14 @@ public class CordovaVungle extends CordovaPlugin {
 			else if ( action.equals("playAd") ) 
 			{
 				final AdConfig overrideConfig = new AdConfig();
-				if(args.length() > 0) {		
-					JSONObject jsonConfig = args.getJSONObject(0);
-					if(jsonConfig != null) {						
-						processConfig(overrideConfig, jsonConfig);
-					}
+				if(args.length() > 0) {	
+					try {
+						JSONObject jsonConfig = args.getJSONObject(0);
+						if(jsonConfig != null) {						
+							processConfig(overrideConfig, jsonConfig);
+						}
+					} catch (JSONException e) { // config is optional anyhow
+					}					
 				}				
 				
 				vunglePub.setEventListener(new EventListener() {
