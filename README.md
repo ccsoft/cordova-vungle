@@ -79,7 +79,7 @@ Initializes the plugin. Must be called before calling any other function.
 >> *vungleId*: string: Your Vungle app id.
 
 >> *config*: object: Optional vungle config params as json object, see below for details. You do NOT need to supply all the params, defaults are used if a property is not supplied.
-See: https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md
+See vungle documentation [for android](https://github.com/Vungle/vungle-resources/blob/master/English/Android/3.2.x/android-advanced-settings.md#configuration-options) and [for ios](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md#playad-options).
 
 >> *successCallback*: function
 
@@ -89,16 +89,17 @@ See: https://github.com/Vungle/vungle-resources/blob/master/Android-resources/an
 
 	plugin.init('YOUR_VUNGLE_ID', {
             /* These are all the properties we support, they are here for demonstration purposes only.
-            orientation: 0, // 0 means Orientation.autoRotate, 1 means Orientation.matchVideo
+            orientation: 0, // Android: 0 means Orientation.autoRotate, 1 means Orientation.matchVideo 
+                            // iOS: We recommend just sending 0, Vungle api is not unified for this param, same parameter mean and behave different for each platform!)
             soundEnabled: true,
-            backButtonImmediatelyEnabled: false,
-            immersiveMode: false,
+            backButtonImmediatelyEnabled: false, // Only available in Android
+            immersiveMode: false, // Only available in Android
             incentivized: false, 
             incentivizedUserId: '',
-            incentivizedCancelDialogTitle: '',
+            incentivizedCancelDialogTitle: '', // Only available in Android
             incentivizedCancelDialogBodyText: '',
-            incentivizedCancelDialogCloseButtonText: '',
-            incentivizedCancelDialogKeepWatchingButtonText: '',
+            incentivizedCancelDialogCloseButtonText: '', // Only available in Android
+            incentivizedCancelDialogKeepWatchingButtonText: '', // Only available in Android
             placement: '',
             extra1: '',
             extra2: '',
