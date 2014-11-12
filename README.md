@@ -59,6 +59,10 @@ public class EachActivity extends android.app.Activity {
 }
 ```
 
+###iOS
+On iOS, you should manually follow the instructions to add the frameworks to your project at this [link](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-dev-guide.md). First 3 steps explain how to add the vungle framework and its dependencies.
+
+
 ##Usage
 The plugin has the following methods:
 * [init](#init)
@@ -117,14 +121,14 @@ See: https://github.com/Vungle/vungle-resources/blob/master/Android-resources/an
 
 >> *config*: object: Optional vungle config params as json object, see init for details
 
->> *successCallback*: function
+>> *successCallback*: function: Called with a boolean for completion of video (to be used in incentivized ads)
 
 >> *failureCallback*: function: Called with failure reason string.
          
 >####example
 
 	plugin.playAd(config
-		function() { // success
+		function(completed) { // success
 			console.log("Ad played");		
 	}), failureCallback);
 

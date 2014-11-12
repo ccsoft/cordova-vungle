@@ -72,10 +72,10 @@ public class CordovaVungle extends CordovaPlugin {
 				        // video).
 						if (isCompletedView) {
 							Log.i(TAG, "completed view");
-							callbackContext.success();
+							callbackContext.success(1);
 						} else {
 							Log.i(TAG, "not completed view");
-							callbackContext.error("User not completed viewing");				        	
+							callbackContext.success(0);				        	
 				        }
 				    }
 

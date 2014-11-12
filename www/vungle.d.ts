@@ -23,8 +23,7 @@ declare module CC {
 
     export interface IVungle {
         init(vungleid: string, config?: IVungleConfig, successcb?: () => void, errorcb?: (err: string) => void): void;
-        playAd(config?: IVungleConfig, successcb?: () => void, errorcb?: (err: string) => void): void;
-        isVideoAvailable(successcb: (avail: boolean) => void, errorcb?: (err: string) => void): void;
-        isSupported(): boolean;
+        playAd(config?: IVungleConfig, successcb?: (completed: boolean) => void, errorcb?: (err: string) => void): void;
+        isVideoAvailable(successcb: (avail: boolean) => void, errorcb?: (err: string) => void): void;        
     }    
 }

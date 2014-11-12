@@ -4,9 +4,6 @@ var CC;
     var Vungle = (function () {
         function Vungle() {
         }
-        Vungle.prototype.isSupported = function () {
-            return true;
-        };
         Vungle.prototype.init = function (vungleid, config, successcb, errorcb) {
             window.cordova.exec(function () {
                 if (successcb)
@@ -18,9 +15,9 @@ var CC;
         };
 
         Vungle.prototype.playAd = function (config, successcb, errorcb) {
-            window.cordova.exec(function () {
+            window.cordova.exec(function (completed) {
                 if (successcb)
-                    successcb();
+                    successcb(completed);
             }, function (err) {
                 if (errorcb)
                     errorcb(err);

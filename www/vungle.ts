@@ -1,10 +1,7 @@
 /// <reference path='vungle.d.ts'/>
 
 module CC {
-    export class Vungle implements IVungle {
-        isSupported() {
-            return true;
-        }
+    export class Vungle implements IVungle {        
         init(vungleid: string, config?: IVungleConfig, successcb?: () => void, errorcb?: (err: string) => void) {
             (<any>window).cordova.exec(() => {
                 if (successcb) successcb();
@@ -13,9 +10,9 @@ module CC {
             }, "CordovaVungle", "init", [vungleid, config]);
         }
 
-        playAd(config?: IVungleConfig, successcb?: () => void, errorcb?: (err: string) => void) {
-            (<any>window).cordova.exec(() => {
-                if(successcb) successcb();
+        playAd(config?: IVungleConfig, successcb?: (completed: boolean) => void, errorcb?: (err: string) => void) {
+            (<any>window).cordova.exec((completed: boolean) => {
+                if(successcb) successcb(completed);
             }, (err) => {
                 if(errorcb) errorcb(err);
             }, "CordovaVungle", "playAd", [config]);
