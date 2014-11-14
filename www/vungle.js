@@ -1,9 +1,7 @@
 /// <reference path='vungle.d.ts'/>
-var CC;
-(function (CC) {
-    var Vungle = (function () {
-        function Vungle() {
-        }
+
+var Vungle =function () {
+        };
         Vungle.prototype.init = function (vungleid, config, successcb, errorcb) {
             window.cordova.exec(function () {
                 if (successcb)
@@ -32,7 +30,17 @@ var CC;
                     errorcb(err);
             }, "CordovaVungle", "isVideoAvailable", []);
         };
-        return Vungle;
-    })();
-    CC.Vungle = Vungle;
-})(CC || (CC = {}));
+
+
+    console.log('----------------');
+    console.log(Vungle);
+if(!window.plugins) {
+    window.plugins = {};
+}
+if (!window.plugins.vungle) {
+    window.plugins.vungle = new Vungle();
+}
+
+if (typeof module != 'undefined' && module.exports) {
+    module.exports = Vungle;
+}
