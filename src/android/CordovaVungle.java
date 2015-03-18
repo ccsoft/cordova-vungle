@@ -63,7 +63,7 @@ public class CordovaVungle extends CordovaPlugin {
 					}					
 				}				
 				
-				vunglePub.setEventListener(new EventListener() {
+				vunglePub.setEventListeners(new EventListener() {
 					@Override
 				    public void onVideoView(boolean isCompletedView, int watchedMillis, int videoDurationMillis) {
 				        // Called each time an ad completes. isCompletedView is true if at least  
@@ -98,8 +98,8 @@ public class CordovaVungle extends CordovaPlugin {
 					}
 
 					@Override
-					public void onCachedAdAvailable() {
-						Log.i(TAG, "ad available");
+					public void onAdPlayableChanged(boolean changed) {
+						Log.i(TAG, "ad available changed: " + changed);
 					}				   
 				});				
 				
@@ -114,7 +114,7 @@ public class CordovaVungle extends CordovaPlugin {
 			}
 			else if ( action.equals( "isVideoAvailable" ) ) 
 			{				
-				final boolean available = vunglePub.isCachedAdAvailable();
+				final boolean available = vunglePub.isAdPlayable();
 				callbackContext.success(available ? 1 : 0 ); 
 				return true;
 			}

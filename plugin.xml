@@ -1,7 +1,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.ccsoft.plugin.CordovaVungle"
-        version="1.0.0">
+        version="1.1.0">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
   </engines>
@@ -20,7 +20,6 @@
     <!-- android -->
     <platform name="android">
       	<source-file src="src/android/CordovaVungle.java" target-dir="src/com/ccsoft/plugin" />					  
-		<dependency id="com.google.playservices" />
 		<config-file target="AndroidManifest.xml" parent="/*">
 		  <uses-permission android:name="android.permission.INTERNET" />
 		  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -30,13 +29,7 @@
 			<activity
 			  android:name="com.vungle.publisher.FullScreenAdActivity"
 			  android:configChanges="keyboardHidden|orientation|screenSize"
-			  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-
-			<service android:name="com.vungle.publisher.VungleService"
-			  android:exported="false"/>
-
-			<meta-data android:name="com.google.android.gms.version"
-			  android:value="@integer/google_play_services_version"/>
+			  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>			
 		</config-file>
 		<config-file target="res/xml/config.xml" parent="/*">
 		  <feature name="CordovaVungle">
