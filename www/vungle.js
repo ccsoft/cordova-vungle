@@ -13,7 +13,6 @@ var CC;
                     errorcb(err);
             }, "CordovaVungle", "init", [vungleid, config]);
         };
-
         Vungle.prototype.playAd = function (config, successcb, errorcb) {
             window.cordova.exec(function (completed) {
                 if (successcb)
@@ -23,7 +22,6 @@ var CC;
                     errorcb(err);
             }, "CordovaVungle", "playAd", [config]);
         };
-
         Vungle.prototype.isVideoAvailable = function (successcb, errorcb) {
             window.cordova.exec(function (s) {
                 successcb(s == 1 ? true : false);
@@ -36,3 +34,4 @@ var CC;
     })();
     CC.Vungle = Vungle;
 })(CC || (CC = {}));
+module.exports = CC;

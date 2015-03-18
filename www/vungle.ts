@@ -27,3 +27,6 @@ module CC {
         }
     }
 }
+
+declare var module;
+module.exports = CC;
