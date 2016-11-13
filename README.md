@@ -18,7 +18,7 @@ To remove this plugin type:
 ###Android
 On Android, plugin does most of the prerequisites automatically, arranges permissions, etc. in AndroidManifest.xml.
 
-Note: We do NOT install google-playservices as a dependency anymore, Vungle does not require it, it's optional, check [Vungle documentation](https://github.com/Vungle/vungle-resources/blob/master/English/Android/current-release/android-dev-guide.md) for more details.
+Note: We do NOT install google-playservices as a dependency anymore, Vungle does not require it, it's optional, check [Vungle documentation](https://support.vungle.com/hc/en-us/articles/204222794-Get-started-with-Vungle-Android-SDK) for more details.
 
 #### Libs
 You should only download and add Vungle libraries.
@@ -62,7 +62,7 @@ public class EachActivity extends android.app.Activity {
 ```
 
 ###iOS
-On iOS, you should manually follow the instructions to add the frameworks to your project at this [link](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-dev-guide.md). First 3 steps explain how to add the vungle framework and its dependencies.
+On iOS, you should manually follow the instructions to add the frameworks to your project at this [link](https://support.vungle.com/hc/en-us/articles/204430550-Getting-Started-with-Vungle-iOS-SDK).
 
 
 ##Usage
@@ -81,7 +81,7 @@ Initializes the plugin. Must be called before calling any other function.
 >> *vungleId*: string: Your Vungle app id.
 
 >> *config*: object: Optional vungle config params as json object, see below for details. You do NOT need to supply all the params, defaults are used if a property is not supplied.
-See vungle documentation [for android](https://github.com/Vungle/vungle-resources/blob/master/English/Android/3.2.x/android-advanced-settings.md#configuration-options) and [for ios](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md#playad-options).
+See vungle documentation [for android](https://support.vungle.com/hc/en-us/articles/204463100-Advanced-Settings-for-Vungle-Android-SDK) and [for ios](https://support.vungle.com/hc/en-us/articles/204463080-Advanced-Settings-for-Vungle-iOS-SDK).
 
 >> *successCallback*: function
 
