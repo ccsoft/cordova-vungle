@@ -89,7 +89,7 @@ See vungle documentation [for android](https://support.vungle.com/hc/en-us/artic
 
 >####example
 
-	plugin.init('YOUR_VUNGLE_ID', {
+	Vungle.init('YOUR_VUNGLE_ID', {
             /* These are all the properties we support, they are here for demonstration purposes only.
             orientation: 0, // Android: 0 means Orientation.autoRotate, 1 means Orientation.matchVideo
                             // iOS: We recommend just sending 0, Vungle api is not unified for this param, same parameter mean and behave different for each platform!)
@@ -130,7 +130,7 @@ See vungle documentation [for android](https://support.vungle.com/hc/en-us/artic
 
 >####example
 
-	plugin.playAd(config
+	Vungle.playAd(config
 		function(completed) { // success
 			console.log("Ad played");
 	}), failureCallback);
@@ -147,7 +147,7 @@ See vungle documentation [for android](https://support.vungle.com/hc/en-us/artic
 
 >####example
 
-	plugin.isVideoAvailable(
+	Vungle.isVideoAvailable(
 		function(response) { // success
             if(response)
 			    console.log("We have an ad available.");
