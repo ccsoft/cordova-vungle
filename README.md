@@ -5,8 +5,8 @@ Cordova plugin to use Vungle ad network.
 
 We have tested with the following Vungle libraries
 
-* Android 3.3.0
-* iOS 3.0.10
+* Android 4.0.2
+* iOS 4.0.4
 
 ##Installing the plugin
 To add this plugin just type:
