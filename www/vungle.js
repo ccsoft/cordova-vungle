@@ -1,10 +1,7 @@
-/// <reference path='vungle.d.ts'/>
-var CC;
-(function (CC) {
-    var Vungle = (function () {
-        function Vungle() {
-        }
-        Vungle.prototype.init = function (vungleid, config, successcb, errorcb) {
+
+		Vungle = {};
+
+        Vungle.init = function (vungleid, config, successcb, errorcb) {
             window.cordova.exec(function () {
                 if (successcb)
                     successcb();
@@ -13,7 +10,7 @@ var CC;
                     errorcb(err);
             }, "CordovaVungle", "init", [vungleid, config]);
         };
-        Vungle.prototype.playAd = function (config, successcb, errorcb) {
+        Vungle.playAd = function (config, successcb, errorcb) {
             window.cordova.exec(function (completed) {
                 if (successcb)
                     successcb(completed);
@@ -22,7 +19,7 @@ var CC;
                     errorcb(err);
             }, "CordovaVungle", "playAd", [config]);
         };
-        Vungle.prototype.isVideoAvailable = function (successcb, errorcb) {
+        Vungle.isVideoAvailable = function (successcb, errorcb) {
             window.cordova.exec(function (s) {
                 successcb(s == 1 ? true : false);
             }, function (err) {
@@ -30,8 +27,5 @@ var CC;
                     errorcb(err);
             }, "CordovaVungle", "isVideoAvailable", []);
         };
-        return Vungle;
-    })();
-    CC.Vungle = Vungle;
-})(CC || (CC = {}));
-module.exports = CC;
+
+module.exports = Vungle;

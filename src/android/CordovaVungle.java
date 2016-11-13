@@ -72,7 +72,7 @@ public class CordovaVungle extends CordovaPlugin {
 				        // video).
 						if (isCompletedView) {
 							Log.i(TAG, "completed view");
-							callbackContext.success(1);
+							//callbackContext.success(1);
 						} else {
 							Log.i(TAG, "not completed view");
 							callbackContext.success(0);				        	
@@ -86,9 +86,10 @@ public class CordovaVungle extends CordovaPlugin {
 				    }
 
 				    @Override
-				    public void onAdEnd(boolean wasCallToActionClicked) {
+				    public void onAdEnd(boolean wasSuccessfulView, boolean wasCallToActionClicked) {
 				        // Called when the user leaves the ad and control is returned to your application
 				    	Log.i(TAG, "ad ended");
+						callbackContext.success(1);
 				    }
 
 					@Override

@@ -65,8 +65,6 @@ static NSMutableDictionary* mConfig = nil;
             [result setObject:[config objectForKey:key] forKey:VunglePlayAdOptionKeyExtra7];
         } else if([keyVal isEqualToString:@"extra8"]) {
             [result setObject:[config objectForKey:key] forKey:VunglePlayAdOptionKeyExtra8];
-        } else if([keyVal isEqualToString:@"incentivizedCancelDialogBodyText"]) {
-            [VungleSDK sharedSDK].incentivizedAlertText = [config objectForKey:key];
         }  else if([keyVal isEqualToString:@"soundEnabled"]) {
             BOOL muted = [[config objectForKey:key] isEqual: @(0)];
             [[VungleSDK sharedSDK] setMuted:muted];
