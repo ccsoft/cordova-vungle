@@ -86,7 +86,7 @@ public class CordovaVungle extends CordovaPlugin {
 				    }
 
 				    @Override
-				    public void onAdEnd(boolean wasCallToActionClicked) {
+				    public void onAdEnd(boolean wasSuccessfulView, boolean wasCallToActionClicked) {
 				        // Called when the user leaves the ad and control is returned to your application
 				    	Log.i(TAG, "ad ended");
 						callbackContext.success(1);
