@@ -122,7 +122,7 @@ See vungle documentation [for android](https://support.vungle.com/hc/en-us/artic
 
 >####parameters
 
->> *config*: object: Optional vungle config params as json object, see init for details
+>> *config*: object: Optional vungle config params as json object to overide init config. Use null if you are happy with the config defined in your init.
 
 >> *successCallback*: function: Called with a boolean for completion of video (to be used in incentivized ads)
 
