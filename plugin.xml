@@ -14,7 +14,7 @@
     <keywords>vungle,phonegap,cordova</keywords>
  
     <js-module src="www/vungle.js" name="Vungle">
-        <merges target="CC" />
+        <merges target="Vungle" />
     </js-module>
  
     <!-- android -->
